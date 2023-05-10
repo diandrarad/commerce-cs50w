@@ -1,1 +1,7 @@
+body {
+    padding: 10px;
+}
 
+.underline-on-hover:hover {
+  text-decoration: underline !important;
+}
