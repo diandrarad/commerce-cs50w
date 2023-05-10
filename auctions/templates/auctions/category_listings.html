@@ -1,0 +1,27 @@
+{% extends 'auctions/layout.html' %}
+
+{% block main %}
+  <h2 class="mt-5">Listings in "{{ category.name }}" Category</h2>
+  {% if listings %}
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        {% for listing in listings %}
+            <div class="col mb-4">
+                <a href="{% url 'listing' listing_id=listing.id %}" class="text-black text-decoration-none">
+                    <div class="card h-100">
+                        {% if listing.image_url %}
+                            <img src="{{ listing.image_url }}" class="card-img-top" alt="{{ listing.title }}">
+                        {% endif %}
+                        <span class="badge bg-primary rounded-pill position-absolute mt-2 ms-2">
+                            <span class="fw-normal">Current Price: $</span><span class="h6"><strong>{{ listing.current_price }}</strong></span>
+                        </span>
+                        <div class="card-body">
+                            <h5 class="card-title text-decoration-none">{{ listing.title }}</h5>
+                            <p class="card-text">{{ listing.description|truncatechars:100 }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}
