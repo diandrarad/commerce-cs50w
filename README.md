@@ -1,5 +1,7 @@
 # E-commerce Auction Site
 
+![Screenshot](screenshot.webp)
+
 ### [Video Demo](https://youtu.be/uY8-5s_B4qo)
 
 # Description
