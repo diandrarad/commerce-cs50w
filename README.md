@@ -1,6 +1,6 @@
 # E-commerce Auction Site
 
-![Screenshot](screenshot.webp)
+![Screenshot](demo.gif)
 
 ### [Video Demo](https://youtu.be/uY8-5s_B4qo)
 
